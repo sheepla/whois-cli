@@ -13,6 +13,8 @@ import (
 
 var (
 	appName        = "whois"
+	appVersion     = "unknown"
+	appRevision    = "unknown"
 	appUsage       = "whois CLI"
 	appDescription = "whois CLI"
 )
@@ -41,6 +43,7 @@ func initApp() *cli.App {
 		Description: appDescription,
 		Action:      run,
 		ArgsUsage:   "DOMAIN",
+		Version:     fmt.Sprintf("%s-%s", appVersion, appRevision),
 	}
 
 	app.Flags = []cli.Flag{
