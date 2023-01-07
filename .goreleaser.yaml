@@ -7,7 +7,8 @@ before:
     # you may remove this if you don't need go generate
     - go generate ./...
 builds:
-  - binary: whois
+  - id: whois
+    binary: whois
   - env:
       - CGO_ENABLED=0
     goos:
