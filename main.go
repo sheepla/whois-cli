@@ -1,4 +1,4 @@
-//nolint:exhaustivestruct,exhaustruct,gochecknoglobals
+//nolint:exhaustivestruct,exhaustruct,gochecknoglobals,gci
 package main
 
 import (
@@ -51,11 +51,11 @@ func initApp() *cli.App {
 			Aliases: []string{"j"},
 			Usage:   "Output in JSON format",
 		},
-		//&cli.BoolFlag{
-		//	Name:    "shell",
-		//	Aliases: []string{"s"},
-		//	Usage:   "Start interactive mode",
-		//},
+		// &cli.BoolFlag{
+		// 	Name:    "shell",
+		// 	Aliases: []string{"s"},
+		// 	Usage:   "Start interactive mode",
+		// },
 	}
 
 	return app
@@ -75,7 +75,7 @@ func run(ctx *cli.Context) error {
 
 	query := ctx.Args().First()
 
-	result, err := resolver.Resolve(query, nil)
+	result, err := resolver.Resolve(query)
 	if err != nil {
 		return cli.Exit(err, exitCodeErrWhois.Int())
 	}
@@ -96,6 +96,7 @@ func run(ctx *cli.Context) error {
 	return cli.Exit("", exitCodeOK.Int())
 }
 
+//nolint:varnamelen
 func fprintResult(w io.Writer, result *whoisparser.WhoisInfo) {
 	fmt.Fprintf(w, "=== DOMAIN ===\n%s %s (%s)\n",
 		result.Domain.ID,
