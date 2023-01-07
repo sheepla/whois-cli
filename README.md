@@ -24,7 +24,7 @@ GLOBAL OPTIONS:
 
 Specifying a domain name as an argument, owner information for that domain will be displayed.
 
-```sh
+```
 $ whois github.com
 
 === DOMAIN ===
@@ -48,7 +48,7 @@ ExpirationDateInTime: 2024-10-09 18:20:50 +0000 UTC
 
 If you run it with the `-j` option, the results will be output in JSON format.
 
-```sh
+```
 $ whois -j github.com
 
 {
