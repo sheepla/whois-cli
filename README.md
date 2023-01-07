@@ -113,3 +113,12 @@ To build from source, run the following:
 ```sh
 go install github.com/sheepla/whois-cli@latest
 ```
+
+## License
+
+[Apache 2.0](https://github.com/sheepla/whois-cli/blob/master/LICENSE)
+
+## Author
+
+[sheepla](https://github.com/sheepla)
+
