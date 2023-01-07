@@ -118,7 +118,13 @@ go install github.com/sheepla/whois-cli@latest
 
 [Apache 2.0](https://github.com/sheepla/whois-cli/blob/master/LICENSE)
 
+
+## Thanks
+
+- [harakeishi/whris](https://github.com/harakeishi/whris) - the project that inspired
+- [likexian/whois](https://github.com/likexian/whois) - the client library for whois
+- [likexian/whois-parser](https://github.com/likexian/whois-parser) - the library to parse raw whois data
+
 ## Author
 
 [sheepla](https://github.com/sheepla)
-
