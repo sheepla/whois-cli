@@ -26,24 +26,43 @@ Specifying a domain name as an argument, owner information for that domain will 
 
 ```
 $ whois github.com
+::
+:: DOMAIN
+::
+       ITEM      |             VALUE
+-----------------+---------------------------------
+  ID             | 1264983250_DOMAIN_COM-VRSN
+  Domain         | github.com
+  Punycode       | github.com
+  Name           | github
+  Extension      | com
+  WhoisServer    | whois.markmonitor.com
+  Status         | clientdeleteprohibited
+                 | clienttransferprohibited
+                 | clientupdateprohibited
+  NameServers    | dns1.p08.nsone.net
+                 | dns2.p08.nsone.net
+                 | dns3.p08.nsone.net
+                 | dns4.p08.nsone.net
+                 | ns-1283.awsdns-32.org
+                 | ns-1707.awsdns-21.co.uk
+                 | ns-421.awsdns-52.com
+                 | ns-520.awsdns-01.net
+  DNSSec         | false
+  CreatedDate    | 2007-10-09T18:20:50Z
+  UpdatedDate    | 2022-09-07T09:10:44Z
+  ExpirationDate | 2024-10-09T18:20:50Z
 
-=== DOMAIN ===
-ID                  : 1264983250_DOMAIN_COM-VRSN
-Domain              : github.com
-Punycode            : github.com
-Name                : github
-Extension           : com
-WhoisServer         : whois.markmonitor.com
-Status              : [clientdeleteprohibited clienttransferprohibited clientupdateprohibited]
-NameServers         : [dns1.p08.nsone.net dns2.p08.nsone.net dns3.p08.nsone.net dns4.p08.nsone.net ns-1283.awsdns-32.org ns-1707.awsdns-21.co.uk ns-421.awsdns-52.com ns-520.awsdns-01.net]
-DNSSec              : false
-CreatedDate         : 2007-10-09T18:20:50Z
-CreatedDateInTime   : 2007-10-09 18:20:50 +0000 UTC
-UpdatedDate         : 2022-09-07T09:10:44Z
-UpdatedDateInTime   : 2022-09-07 09:10:44 +0000 UTC
-ExpirationDate      : 2024-10-09T18:20:50Z
-ExpirationDateInTime: 2024-10-09 18:20:50 +0000 UTC
-...
+::
+:: REGISTRAR
+::
+     ITEM     |              VALUE
+--------------+----------------------------------
+  ID          |                             292
+  Name        | MarkMonitor Inc.
+  Phone       | +1.2086851750
+  Email       | abusecomplaints@markmonitor.com
+  ReferralURL | http://www.markmonitor.com
 ```
 
 If you run it with the `-j` option, the results will be output in JSON format.
