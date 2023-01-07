@@ -1,6 +1,20 @@
+<div align="right">
+
+[![golangci-lint](https://github.com/sheepla/whois-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/sheepla/whois-cli/actions/workflows/ci.yml)
+
+[![Release](https://github.com/sheepla/whois-cli/actions/workflows/release.yml/badge.svg)](https://github.com/sheepla/whois-cli/actions/workflows/release.yml)
+
+</div>
+
+
+<div align="center">
+
 # whois-cli
 
 A simple command line [whois](https://en.wikipedia.org/wiki/Whois) client
+
+</div>
+
 
 ## Usage
 
