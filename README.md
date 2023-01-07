@@ -104,6 +104,12 @@ $ whois -j github.com
 
 ## Installation
 
+You can download the executable binaries from the release page
+
+> [latest release](https://github.com/sheepla/whois-cli/releases/latest)
+
+To build from source, run the following:
+
 ```sh
 go install github.com/sheepla/whois-cli@latest
 ```
