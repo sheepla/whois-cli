@@ -9,15 +9,14 @@ import (
 )
 
 var (
-	ErrRequest = errors.New("failed to create whois request")
-	ErrFetch   = errors.New("an error occurred while retrieving results from the whois server")
-	ErrParse   = errors.New("an error occurred while parsing whois raw record")
+	ErrWhois = errors.New("an error occurred while querying the whois server")
+	ErrParse = errors.New("an error occurred while parsing whois raw record")
 )
 
 func Resolve(domain string) (*whoisparser.WhoisInfo, error) {
 	raw, err := whois.Whois(domain)
 	if err != nil {
-		return nil, fmt.Errorf("%w: %s", ErrRequest, err)
+		return nil, fmt.Errorf("%w: %s", ErrWhois, err)
 	}
 
 	result, err := whoisparser.Parse(raw)
