@@ -9,12 +9,11 @@
 
 <div align="center">
 
-# whois-cli
+# 🌐 whois-cli
 
 A simple command line [whois](https://en.wikipedia.org/wiki/Whois) client
 
 </div>
-
 
 ## Usage
 
