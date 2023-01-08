@@ -22,17 +22,21 @@ NAME:
    whois - whois CLI
 
 USAGE:
-   whois [global options] command [command options] QUERY
+   whois [global options] command [command options] DOMAIN SERVERS...
+
+VERSION:
+   unknown-unknown
 
 DESCRIPTION:
-   whois CLI
+   A whois command line client, to query domain owner information and retrieve results.
 
 COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --json, -j  Output in JSON format (default: false)
-   --help, -h  show help (default: false)
+   --json, -j     Output in JSON format (default: false)
+   --help, -h     show help (default: false)
+   --version, -v  print the version (default: false)
 ```
 
 Specifying a domain name as an argument, owner information for that domain will be displayed.
@@ -76,6 +80,13 @@ $ whois github.com
   Phone       | +1.2086851750
   Email       | abusecomplaints@markmonitor.com
   ReferralURL | http://www.markmonitor.com
+```
+
+
+**EXPERIMENTAL** By specifying the host name after the second argument, you can change the whois server to query.
+
+```
+whois DOMAIN SERVERS...
 ```
 
 If you run it with the `-j` option, the results will be output in JSON format.
