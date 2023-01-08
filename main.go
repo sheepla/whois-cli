@@ -16,7 +16,7 @@ var (
 	appVersion     = "unknown"
 	appRevision    = "unknown"
 	appUsage       = "whois CLI"
-	appDescription = "whois CLI"
+	appDescription = "A whois command line client, to query domain owner information and retrieve results."
 )
 
 type exitCode int
