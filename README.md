@@ -1,7 +1,6 @@
 <div align="right">
 
 [![golangci-lint](https://github.com/sheepla/whois-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/sheepla/whois-cli/actions/workflows/ci.yml)
-
 [![Release](https://github.com/sheepla/whois-cli/actions/workflows/release.yml/badge.svg)](https://github.com/sheepla/whois-cli/actions/workflows/release.yml)
 
 </div>
@@ -14,6 +13,12 @@
 A simple command line [whois](https://en.wikipedia.org/wiki/Whois) client
 
 </div>
+
+## Features
+
+- [x] Query the whois server and display the results in a table
+- [x] Output the result in JSON format
+- [x] Specifiable whois server to query - *EXPERIMENTAL*
 
 ## Usage
 
@@ -83,7 +88,7 @@ $ whois github.com
 ```
 
 
-**EXPERIMENTAL** By specifying the host name after the second argument, you can change the whois server to query.
+**EXPERIMENTAL**: By specifying the host name after the second argument, you can change the whois server to query.
 
 ```
 whois DOMAIN SERVERS...
