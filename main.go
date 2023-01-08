@@ -42,7 +42,7 @@ func initApp() *cli.App {
 		Usage:       appUsage,
 		Description: appDescription,
 		Action:      run,
-		ArgsUsage:   "DOMAIN",
+		ArgsUsage:   "DOMAIN SERVERS...",
 		Version:     fmt.Sprintf("%s-%s", appVersion, appRevision),
 	}
 
@@ -63,20 +63,12 @@ func initApp() *cli.App {
 }
 
 func run(ctx *cli.Context) error {
-	if ctx.NArg() < 1 {
-		return cli.Exit("must requires an augument", exitCodeErrArgs.Int())
+	domain, servers, err := parsePositionalArgs(ctx)
+	if err != nil {
+		return cli.Exit(err, exitCodeErrArgs.Int())
 	}
 
-	if 1 < ctx.NArg() {
-		return cli.Exit(
-			fmt.Sprintf("too many arguments (%v)", ctx.Args().Slice()),
-			exitCodeErrArgs.Int(),
-		)
-	}
-
-	domain := ctx.Args().First()
-
-	result, err := resolver.Resolve(domain)
+	result, err := resolver.Resolve(domain, servers)
 	if err != nil {
 		return cli.Exit(err, exitCodeErrWhois.Int())
 	}
@@ -95,4 +87,19 @@ func run(ctx *cli.Context) error {
 	printer.FprintResult(ctx.App.Writer, result)
 
 	return cli.Exit("", exitCodeOK.Int())
+}
+
+//nolint:nonamedreturns
+func parsePositionalArgs(ctx *cli.Context) (domain string, servers []string, err error) {
+	if ctx.NArg() < 1 {
+		return "", []string{}, cli.Exit(
+			"must requires augument(s)",
+			exitCodeErrArgs.Int(),
+		)
+	}
+
+	domain = ctx.Args().First()
+	servers = ctx.Args().Slice()[1:]
+
+	return domain, servers, nil
 }
