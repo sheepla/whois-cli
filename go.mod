@@ -6,7 +6,7 @@ require (
 	github.com/likexian/whois v1.14.4
 	github.com/likexian/whois-parser v1.24.2
 	github.com/olekukonko/tablewriter v0.0.5
-	github.com/urfave/cli/v2 v2.23.7
+	github.com/urfave/cli/v2 v2.24.4
 )
 
 require (
